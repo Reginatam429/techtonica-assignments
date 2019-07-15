@@ -1,0 +1,34 @@
+1. I plan to exhibit professionalism at Techtonica by treating my fellow cohort apprentices and deliverable deadlines with respect. I want to show that I am a team player and con keep up with as well as assist other apprentices. In a full time engineering setting, I will also do the same but recognize that while Techtonica is a safe space, not all future work places will be and I would be more vigilant of my actions in a professional setting.
+
+2. I would inform my team as soon as I find out. Depending on whether there will be a meeting I am late for or not, the messaging of my email would be different. If there were deliverables that needed to be covered in a meeting, I would send information to my team to cover it.
+
+3.I would inform my manager or project lead of this and work out a solution with them. For example, maybe we can extend the deadline or move my work around so that the most important parts are handled first.
+
+4. I retain information the best when I practice. I find that the more I put something to practice, the more it stays with me because I would could get a better idea of how a concept is applicable to my work.
+
+5.Growth mindset is about being positive about learning and how there is scientific proof that learning can help develop the brain.
+
+6. I am using the macOS Mojave version 10.14.5. Two other popular operating systems would be windows and linux.
+
+7. Computers need operating systems because they tell the computer what to do, manages the memory and processes.
+
+8. I would first go through the prompt again to see if I can break it down into simpler parts. If that doesn't work, I will try to google for some help on stack overflow and maybe check in with other apprentices to see if they see something I don't. In between, I would also go get some water to give myself a break and come back with fresh eyes to tackle this problem.
+
+9.I have added some indeed employees that I conversed with. This month I plan to go to a Women's Javascript study group and the Spectra Hackathon.
+
+10. For example, you can use eye contact to express that you are paying attention to someone as they speak, or you can stand with good posture to exude confidence. You can also smile and nod your head when communicating to give off a positive impression.
+
+11. Instead of saying words like 'No' or 'You need to', we could say things like 'here are some options'and 'I will try' to make for a more positive interaction with others.
+
+12. You can build trust in a team by showing your commitment to the team being consistentand a team player.
+
+13. they are connected through wires and cables.
+
+14. They are transferred through electricity in wires or light in fiber optics.
+
+15. They find each other through IP addresses.
+
+16. Computers use HTTP to communicate with one another mostly in the form of GET requests and Post requests.
+
+17. We can send data reliably because we use a combination of routers which give use multiple routes to send data in packets and the TCP which checks our data packets to make sure all the data is there before the file,picture or video runs on our browsers.
+  
