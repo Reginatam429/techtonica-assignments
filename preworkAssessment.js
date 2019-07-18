@@ -9,15 +9,22 @@ var animal = "lion";
 // If the value of animal is "frog", print to the console "Ribbit ribbit"
 // For any other value, print "Just another animal"
 
-if (animal==lion){
-    console.log("I'm scared!");
-} else if (animal==dog){
-    console.log("So cute");
-} else if (animal==frog) {
-    console.log(Ribbit ribbit);
-} else {
-    console.log('Just another animal');
-}
+function animalRun(animal){
+    var answer;
+   if (animal=="lion"){
+       answer = "I'm scared!";
+   } else if (animal=="dog"){
+      answer = "So cute";
+   } else if (animal=="frog") {
+     answer = "Ribbit ribbit";
+   } else {
+     answer = "Just another animal";
+   }
+   return answer;
+   }
+   
+   animalRun("frog");
+
 // Exercise 3. Declare 2 variables called person1Age and person2Age and give them values of your choice.
 // Write a conditional that does the following:
 // If both ages are less than 18, print "You are both children"
@@ -49,17 +56,24 @@ var flavors = ["vanilla","chocolate","strawberry"];
 
 // Exercise 7. Update the second element of the array to be a different value
 
-flavors[1]="pistachio";
+var flavors = ["vanilla","chocolate","strawberry"]
+flavors[1]="pistachio"
+
+console.log(flavors);
+
 // Exercise 8. Add 2 more items to the array
 
-flavors.push(mango,coconut);
+var flavors = ["vanilla","chocolate","strawberry"];
+flavors.push("mango","coconut");
+
+console.log(flavors);
 
 // Exercise 9. Write a function called multiply that takes in 3 numbers, and returns
 // the product of the 3 numbers multiplied together
 function multiply(num1,num2,num3){
     console.log(num1*num2*num3);
 }
-
+multiply(1,2,3);
 // Exercise 10. Write a function that takes in an integer. The function should print all
 // integers from 1 to that number. Next to each one it should print whether 
 // it is even or odd. For example, if the number is 4, print:
@@ -86,11 +100,14 @@ evenOrOdd(10);
 var pet = {animal: "Dog", age:2};
 
 // Exercise 12. Print the pet's age
+var pet = {animal: "Dog", age:2};
 console.log(pet.age);
 
 // Exercise 13. Update pet's age to be a different value
 
-pet.age= 5;
+var pet = {animal: "Dog", age:2};
+pet.age= 5
+console.log(pet.age);
 
 // Exercise 14. In the comments below, write a sentence explaining what each of the following data types are.
 // String is data stored as text.
