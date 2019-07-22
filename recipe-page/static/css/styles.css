@@ -1,0 +1,67 @@
+
+
+p {
+    color: #246742;
+    background-color: rgba(250, 248, 241, 0.945);
+    padding: 20px;
+    font-size: 20px;
+  }
+
+ .guacback{
+	background-image: url("https://cdn5.vectorstock.com/i/1000x1000/17/14/doodle-green-avocados-seamless-pattern-background-vector-14661714.jpg");
+	cursor: pointer;
+       }
+
+.miniheaders{
+    font-family: 'Archivo Black', sans-serif;
+    size: 20px;
+}
+
+h1{
+    font-family: 'Fredericka the Great', cursive;
+    color: #1A560F;
+    background-color: rgb(222, 248, 214);
+    margin-top: 20px;
+    padding: 50px;
+    font-size: 50px;
+}
+
+
+.top1{
+    clear: both;
+}
+.infotext{
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+}
+
+
+.pic{
+    text-align: center; 
+     margin: 20px auto; 
+
+}
+.guac{
+     width: 80%; 
+    margin: 0 auto; 
+}
+.video{
+    text-align: center;
+}
+.extraInfo{
+    text-align: center;
+}
+
+img{
+  
+}
+
+@media (max-width: 800px) {
+    img {
+      width: 100%;
+    }
+    .pic{
+        width: 100%;
+    }
+  }
