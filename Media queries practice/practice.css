@@ -1,0 +1,23 @@
+
+h1{
+    color: blue;
+}
+
+img {
+    width: 32%;
+  }
+
+  @media () {
+  }
+
+  @media (max-width: 1080px) {
+    img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1081px) {
+    body {
+        background-color: red;
+    }
+}
