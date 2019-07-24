@@ -1,0 +1,14 @@
+function printCuteAnimals(myArray){
+  if(Array.isArray(myArray)){
+    console.log(myArray);
+    console.log(myArray.length);
+    console.log(myArray.concat("panda"));
+    console.log(myArray.concat("panda").length);
+    console.log(myArray.pop());
+    console.log(myArray.pop().length);
+  }
+  return myArray;
+}
+
+var array = ["cat","dog","lion"];
+printCuteAnimals(array);
