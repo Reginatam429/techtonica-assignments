@@ -1,11 +1,54 @@
+function remove(array,person){
+  array.splice(array.indexOf(person),1);
+}
+
 function movieNight(array){
-let classArray = [];
-
-if(){
-    
+//Check D
+if (array.includes("D")){
+  if (array.includes("M")){
+    remove(array,"M");
+  }
+  if(!(array.includes("A"))){
+   array.push("A");
+  }
+}
+//Check M
+if (array.includes("M")){
+  if(!(array.includes("P"))){
+    array.push("P");
+  }
+}
+//Check P
+if (array.includes("P")){
+  if (!(array.includes("M"))){
+    array.push("M");
+  }
+  if (array.includes("D")){
+    remove(array,"P");
+    remove(array,"M");
+  }
+}
+//Check A
+if (array.includes("A")){
+  if (!(array.includes("D"))){
+    remove(array,"A");
+  }
 }
 
-return classArray;
+if(array.length>=2 && (!(array.includes("B")))){
+  array.push("B");
+}
+//////////////////
+return array;
 }
 
-movieNight();
+console.log(movieNight(['P', 'D', 'A']));
+console.log(movieNight(['P', 'D', 'M']));
+console.log(movieNight(['P', 'B', 'A']));
+console.log(movieNight(['P', 'B', 'M']));
+console.log(movieNight(['B', 'A', 'M']));
+console.log(movieNight(['D', 'B', 'A']));
+console.log(movieNight(['D', 'A', 'M']));
+console.log(movieNight(['A', 'M', 'P']));
+console.log(movieNight(['D', 'B', 'M']));
+console.log(movieNight(['P', 'D', 'B']));
