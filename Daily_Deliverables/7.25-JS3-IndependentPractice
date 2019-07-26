@@ -1,0 +1,11 @@
+function movieNight(array){
+let classArray = [];
+
+if(){
+    
+}
+
+return classArray;
+}
+
+movieNight();

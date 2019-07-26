@@ -1,0 +1,34 @@
+//Independent Practice
+//Create some dates in Javascript.
+
+var d1 = new Date(1999,5,20);
+var d21 = new Date(2018,0,11);
+
+//Create your Birthday
+
+var birthday = new Date(1990, 3, 29);
+
+console.log(birthday);
+
+//Can you format/print a date in different formats?
+
+var birthday = new Date(1990, 3, 29);
+
+console.log(birthday);
+console.log(birthday.getFullYear());
+console.log(birthday.getDate());
+console.log(birthday.getTime());
+
+//Explain the "epoch time" to a friend. Why do you think "epoch time is useful?
+//Unix epoch, or epoch time is an expression in seconds since 1/1/1970. It allows us to mathematically compare dates.
+
+//Learn about other ways of working with dates
+//Look at Moment.js documentation
+
+//Challenge
+//If you add (date1 + date2) or subtract (date1 - date2) two dates in Javascript, it returns the time difference in milliseconds. Can you write a function to subtract two dates but return the time difference in minutes? What about as a date object?
+
+let date1 = new Date(2010,0,1);
+let date2 = new Date(2019,0,1);
+
+console.log(date1.getMinutes() - date2.getMinutes());
