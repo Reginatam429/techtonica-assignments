@@ -22,3 +22,24 @@ function printVacations(array){
     }
     
     printVacations([ ['Tammy', ['Tahiti', 'Bali', 'Hawaii']], ['Erin', ['Banff, Alberta, Canada', 'Iceland']], ['Janet', ['London', 'Hogwarts']]]);
+
+    //Challenge - Multiplication table
+    //for loop
+    function multiply(num){
+        for(let i=1; i<=10; i++){
+          console.log(num*i);
+        }
+      }
+      
+      multiply(5);
+
+      //while loop
+      function multiply(num){
+        let i=1;
+        while(i<=10){
+        console.log(num*i);
+        i++;
+        }
+      }
+      
+      multiply(5);
