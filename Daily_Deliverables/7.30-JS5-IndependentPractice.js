@@ -64,9 +64,9 @@ function calculate(num1,mathOp,num2){
 
     //Challenges
 
-    function movieNight(input){
+    function movieNight(array){
         switch(true){
-          case input[0]==="D" || input[1] ==="D"|| input[2] === "D" :
+          case array.includes("D"):
             return ["D","A","B"];
             break;
           default:
@@ -106,3 +106,54 @@ function calculate(num1,mathOp,num2){
       
       checkVowel("i");
       checkVowel("j");
+
+//Code Challeges with Switches and functions:
+//       You are given a variable, . Your task is to print: 
+
+// - ONE, if num is equal to 1. 
+// - TWO, if num  is equal to 2. 
+// - THREE, if num is equal to 3.
+// - FOUR, if num is equal to 4.
+// - FIVE, if num is equal to 5.
+// - SIX, if num is equal to 6.
+// - SEVEN, if num is equal to 7.
+// - EIGHT, if num  is equal to 8.
+// - NINE, if num is equal to 9.
+// - PLEASE TRY AGAIN, if num is none of the above.
+switch(num){
+    case 1:
+        console.log("ONE");
+        break;
+    case 2:
+        console.log("TWO");
+        break;
+    case 3:
+        console.log("THREE");
+        break;
+    case 4:
+        console.log("FOUR");
+        break;
+    case 5:
+        console.log("FIVE");
+        break;
+    case 6:
+        console.log("SIX");
+        break;
+    case 7:
+        console.log("SEVEN");
+        break;
+    case 8:
+        console.log("EIGHT");
+        break;
+    case 9:
+        console.log("NINE");
+        break;
+    default:
+        console.log("PLEASE TRY AGAIN");
+        break;
+}
+
+//Conditional Statements: Switch
+
+
+    
