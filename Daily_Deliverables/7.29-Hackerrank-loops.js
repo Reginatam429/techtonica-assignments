@@ -24,11 +24,22 @@ function vowelsAndConsonants(s) {
 
 function vowelsAndConsonants(word){
 let vowels = ["a","e","i","o","u"];
-    for(let i=0;i<s.length;i++){
+let wordVowels = [];
+let wordConsonants =[];
+
+for(let i=0;i<s.length;i++){
         if (vowels.includes(word[i])){
-            
+           wordVowels.push(word[i]); 
+        } else {
+            wordConsonants.push(word[i]);
         }
 
     }
-
+for (let j=0; j<wordVowels.length; j++){
+    console.log(wordVowels[j]);
 }
+for (let k=0; k<wordConsonants.length; k++){
+    console.log(wordConsonants[k]);
+}
+
+vowelsAndConsonants("javascript");
