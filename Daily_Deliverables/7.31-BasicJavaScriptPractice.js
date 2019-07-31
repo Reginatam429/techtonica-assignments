@@ -25,7 +25,7 @@ console.log(loopThrough(10));
 var obj = {
     calculateSum(inputNum) {
         let numSum = 0;
-        for(let i=0; i<inputNum;i++){
+        for(let i=0; i<=inputNum;i++){
             numSum = numSum + i;
         }
         return numSum;
@@ -35,4 +35,14 @@ var obj = {
   console.log(obj.calculateSum(10));
 
   //Challenge 4: FizzBuzz
-  
+//   Write a function called fizzbuzz that prints each number from 1 to the input on a new line.
+
+// For each multiple of 3, print "Fizz" instead of the number.
+// For each multiple of 5, print "Buzz" instead of the number.
+// For numbers which are multiples of both 3 and 5, print "FizzBuzz" instead of the number.
+
+function fizzbuzz(input){
+    for(let i=1; i<=input; i++){
+        
+    }
+}
