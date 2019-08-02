@@ -134,18 +134,28 @@ console.log(Kevin);
 // Prove the change worked by printing the second key in each object to the console, which should show the new value. Use bracket-notation to access the values this time.
 
 let employees = [
-    {key:"Ben", gender:"male", age: 23},
-    {key:"Mary", gender:"female", age:35},
-    {key:"Watitti", gender:"male", age:100}
+    {name:"Ben", gender:"male", age: 23},
+    {name:"Mary", gender:"female", age:35},
+    {name:"Watitti", gender:"male", age:100}
 ];
 
-function newHires(array){
-    for(var i = 0; i < array.length; i++)
+
+function newHires(obj){
+    for(var i = 0; i < obj.length; i++)
     {
-        console.log(array[i].gender);
+       // console.log(obj[i].key[1]);
+       console.log(Object.values(obj[i])[1]);
     }
-    //return array.gender === "male";
+    //return array.gender === "male or female";
 }
 
 newHires(employees);
+
+employees[0].gender = 'alien';
+employees[1].gender = 'unicorn';
+employees[2].gender = 'vampire';
+
+console.log(employees.gender);
+
+
 
