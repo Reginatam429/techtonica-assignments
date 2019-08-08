@@ -75,3 +75,12 @@ $(document).ready(function() {
 
   //step 12:
   event_obj3.searchTickets(0, 250);
+
+  //Independent Practice
+
+
+    let btn = document.createElement("BUTTON");   
+    btn.innerHTML = "Find Tickets";                  
+    document.body.appendChild(btn); 
+
+  
