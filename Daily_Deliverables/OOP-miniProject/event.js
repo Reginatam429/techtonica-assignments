@@ -53,7 +53,7 @@ console.log(Ticket);
 $(document).ready(function() {
     let html = "";
     $.each(event_array, function(_index, item) {
-      html+= `<li>${item.name} - ${item.description}</li>`;
+      html+= `<li>${item.name} - ${item.description}- ${item.searchTickets(0, 250)}</li>`;
     });
     // insert final html into #event...
     $("#event").html(html);
@@ -74,4 +74,4 @@ $(document).ready(function() {
   event_obj3.addAvailableTickets("Mosh Pit", 90);
 
   //step 12:
-  document.write(event_obj3.searchTickets(0, 250));
+  event_obj3.searchTickets(0, 250);
