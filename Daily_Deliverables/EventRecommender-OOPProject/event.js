@@ -13,13 +13,13 @@ class User{
         this.userInterests = userInterests;
         this.userFavoritedEvents = [];
     }
-    addEvent(chosenEvent){
+    addFavoriteEvent(chosenEvent){
         this.userFavoritedEvents.push(chosenEvent);
     }
 }
 
 class EventRecommender {
-    constructor(events,users) {
+    constructor() {
     // All main properties should go here.
     
     this.events = [];
@@ -27,21 +27,19 @@ class EventRecommender {
     
     }
 
-    addEvent(eventName,eventType,eventDate,eventPrice) {
+    addEvent(newEvent) {
     // Adds a new Event to the System
-       let newEvent = new Event(eventName,eventType,eventDate,eventPrice);
        this.events.push(newEvent);
     }
 
-    addUser(userName,userInterests) {
+    addUser(newUser) {
     // Adds a new User to the System
-       let newUser = new User(userName,userInterests);
        this.users.push(newUser);
     }
 
-    saveUserEvent(){
-    //Allow users to save events to a personal Events array.
-    }
+    // saveUserEvent(){
+    // //Allow users to save events to a personal Events array.
+    // }
 
     deleteUser(userName) {
     // Deletes a User from the system
@@ -55,5 +53,26 @@ class EventRecommender {
     filter(){
     }
 }
-let MovieRecommender = new EventRecommender();
-EventRecommender_userMary.addUser("Mary","Movies");
+//below instantiate class -- creating object of that class
+//let my varibable called system be an instance of the class EventRecommender
+
+// When you instantiate an EventRecommender object, you should be able to do the following:
+let system = new EventRecommender();
+// Users:
+// Add a new User to the System
+let userYasmine = new User("Yasmine","movies");
+let userRegina = new User("Regina","concert");
+system.addUser(userYasmine);
+system.addUser(userRegina);
+console.log(system);
+// Allow users to save events to a personal Events array
+userRegina.addFavoriteEvent("KCON");
+userYasmine.addFavoriteEvent("Harry Potter");
+console.log(userRegina);
+console.log(userYasmine);
+// Delete a User from the System
+// Event:
+// Add a new Event to the System
+// Delete an Event from the System
+// Filter:
+// Note: You can use two separate filter functions or one if you'd like an extra challenge :)
