@@ -121,3 +121,81 @@ console.log(userWendy);
 console.log(system.eventPricefilter(10,500));
 
 console.log(system);
+
+//Username Login
+function inputUser(){
+let loginName = document.getElementById("login").value;
+if (loginName!= null) {
+    return document.getElementById("siteTitle").value = `Hi ${loginName}!`;
+}
+}
+
+//
+// function updateSystemEvents() {
+//     let html = '';
+//     for (let i = 0; i < system.events.length; i++) {
+//         html += 
+//         `<div class="col">
+//             <div class="card" style="width: 18rem;">
+//                 <div class="card-body">
+//                     <h5 class="card-title">${system.events[i].name}</h5>
+//                     <p class="card-text">${system.events[i].description}</p>
+//                     <div class="row">
+//                         <button class="col" id="${i}save" onclick="saveEventUser(this.id)" type="button" class="btn btn-primary"> Save</button>
+//                         <button class="col" id="${i}delete" onclick="deleteEvent(this.id)" type="button" class="btn btn-primary"> Delete</button>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>`;
+//     }
+//     //document.getElementById('systemEvents').innerHTML = html; 
+// }
+
+// function updateUserList() {
+//     let html = '';
+//     for (let i = 0; i < user.userFavoritedEvents.length; i++) {
+//         html += 
+//         `<div class="col">
+//             <div class="card" style="width: 18rem;">
+//                 <div class="card-body">
+//                     <h5 class="card-title">${user.userFavoritedEvents[i].eventName}</h5>
+//                     <p class="card-text">${user.userFavoritedEvents[i].eventType}</p>
+//                     <div class="row">
+//                         <button class="col" id="${i}userDelete" onclick="deleteUserEvent(this.id)" type="button" class="btn btn-primary"> Delete</button>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>`;
+//     }
+//     document.getElementById('userEvents').innerHTML = html;
+// }
+
+//     if (localStorage.getItem('name') === null && localStorage.getItem('email') === null) {
+//         alert('Welcome to Event Recommender')
+//         var name = prompt('What is your name?')
+//         localStorage.setItem('name', name)
+//         var email = prompt('What is your email?')
+//         localStorage.setItem('email', email)
+//         alert("Hi " + name.toUpperCase(name))
+//         user = new User(name, email);
+//         system = new EventRecommender();
+//         localStorage.setItem('userEventList', JSON.stringify({'list': user.eventList}));
+//         if (localStorage.getItem('system') === null) {
+//             localStorage.setItem('system', JSON.stringify({'list': system.events}))
+//         } else {
+//             system.events = JSON.parse(localStorage.getItem('system')).list
+//             updateSystemEvents();
+//         }
+        
+//     } else {
+//         console.log("FIrst")
+//         user = new User(localStorage.getItem('name'), localStorage.getItem('email'))
+//         user.eventList = JSON.parse(localStorage.getItem('userEventList')).list
+//         system = new EventRecommender();
+//         system.events = JSON.parse(localStorage.getItem('system')).list
+//         updateSystemEvents();
+//         updateUserList();
+//         console.log("I am here")
+//     }
+//     document.getElementById('userName').innerHTML = user.name;
+//     document.getElementById('userEmail').innerHTML = user.email;

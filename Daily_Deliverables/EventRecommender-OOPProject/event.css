@@ -1,13 +1,29 @@
+.img-container{
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/00/05/32/9556265185ea051.jpg);
+    height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+.greet{
+    font-weight: bold;
+    font-family: 'Archivo Black', sans-serif;
+}
+  
 .siteTitle {
     font-family: 'Anton', sans-serif;
     font-size: 40px;
-    text-align: center;
+    text-align: left;
+    font-weight: bold;
 }
 
 header {
     padding: 156px 0 100px;
   }
   
-  section {
-    padding: 150px 0;
+section {
+    padding: 100px 0;
   }
+
