@@ -7,7 +7,7 @@
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Anton|Archivo+Black|Roboto|Ultra&display=swap" rel="stylesheet">
     <title>Event Finder</title>
-<h1 class="siteTitle">Event Finder</h1>
+<h1 id="siteTitle">Event Finder</h1>
 <link rel = "stylesheet" href = "event.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -28,9 +28,9 @@
               <h2 class="subheaders">Event Finder Login:</h2>
               
                 <form id="login" onsubmit="inputUser()">
-                    Name: <input type="text" name="name"><br>
+                    Name: <input id="loginName" type="text" name="name"><br>
                     <input type="submit" value="Submit">
-                  </form> 
+                 </form> 
              
             </div>
           </div>
@@ -76,8 +76,9 @@
     </div>
     <!-- /.container -->
   </footer>
-<!--<script src="jQuery-scripts.js"></script>-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>     
+<!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>   
+    <script src="jQuery-scripts.js"></script>  
 <!--js page-->
     <script src="event.js"></script>
 <!--Bootstrap for JQuery-->

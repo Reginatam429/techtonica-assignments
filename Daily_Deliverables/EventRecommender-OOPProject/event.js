@@ -122,13 +122,7 @@ console.log(system.eventPricefilter(10,500));
 
 console.log(system);
 
-//Username Login
-function inputUser(){
-let loginName = document.getElementById("login").value;
-if (loginName!= null) {
-    return document.getElementById("siteTitle").value = `Hi ${loginName}!`;
-}
-}
+
 
 //
 // function updateSystemEvents() {
