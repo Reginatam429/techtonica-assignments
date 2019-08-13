@@ -13,17 +13,17 @@
 // });
 
 //Username Login
-let siteTitle = document.getElementById("siteTitle").innerText;
-    console.log(siteTitle);
+// let siteTitle = document.getElementById("siteTitle").innerText;
+// console.log(siteTitle);
 
 function inputUser(){
     
     let loginName = document.getElementById("loginName").value;
-    alert(`Hi ${loginName}!`);
-    let siteTitle = document.getElementById("siteTitle");
+    // alert(`Hi ${loginName}!`);
+    // let siteTitle = document.getElementById("siteTitle").innerText;
     console.log(siteTitle);
     if (loginName != null) {
-        siteTitle = `Hi ${loginName}!`;
+        document.getElementById("siteTitle").innerHTML = `Hi ${loginName}!`;
     }
 }
 
