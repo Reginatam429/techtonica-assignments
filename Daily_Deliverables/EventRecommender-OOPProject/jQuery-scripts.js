@@ -19,7 +19,7 @@
 function inputUser(){
     
     let loginName = document.getElementById("loginName").value;
-    // alert(`Hi ${loginName}!`);
+    console.log(`Hi ${loginName}!`);
     // let siteTitle = document.getElementById("siteTitle").innerText;
     console.log(siteTitle);
     if (loginName != null) {
