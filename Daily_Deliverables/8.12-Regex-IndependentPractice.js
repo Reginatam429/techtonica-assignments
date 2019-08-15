@@ -42,5 +42,9 @@ console.log(strArray("Leah, Russell, Michelle"));
 
 // Challenges
 // Write a regular expression that matches any participant name, but not any staff name
+ [^TaLea][^Michelle]\w*
+ 
 // What about a regular expression for all even-length strings?
+
+
 // Do lessons 11+ on https://regexone.com
