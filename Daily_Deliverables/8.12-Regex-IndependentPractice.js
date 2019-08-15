@@ -22,9 +22,24 @@ const ingDelete = (input) => {
 };
 
 console.log(ingDelete("I am loving and hating symantec!"));
-...console.
+
 // Write a function that takes a string and returns true if it is an email address? Compare your answer with your neighbor.
+const emailOrNot = (email) => {
+    return /\w+[@]\w+\./.test(email)
+};
+
+console.log(emailOrNot("hihihi@gmail.com"));
+console.log(emailOrNot("johny@yahoo.com"));
+console.log(emailOrNot("hihihigmailcom"));
+
 // Write a function that takes a string containing names separated by commas like "Leah, Russell, Michelle" and returns an array of names, ["Leah", "Russell", "Michelle"]
+const strArray = (str) => {
+    return str.match(/\w+/g)
+};
+
+console.log(strArray("cat,dog,fish"));
+console.log(strArray("Leah, Russell, Michelle"));
+
 // Challenges
 // Write a regular expression that matches any participant name, but not any staff name
 // What about a regular expression for all even-length strings?
