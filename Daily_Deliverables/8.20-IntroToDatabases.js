@@ -24,16 +24,21 @@
 // Find out which friend gave you this recipe (if any)
 // Make a data model for this app, and answer the following questions:
 
-// What is the entity?
+// What is the entity? 
+    //Recipe 
 // What are the attributes of the entity?
+    // Recipe ID,Name, Description, Vegetarian, Date Added, Meal Type, Times Made,, Recipe Exchange
 // What is the primary key of the entity?
+    //Recipe ID#
 // What are the data types of the attributes?
+    //Text,boolean, date 
 // Are there other ways you might model this data?
+    //We could also turn the meal type attributes into 3: breakfast,lunch and dinner - turn these into boolean data types.
 // Exercise 2.
 // In your own words, define the following terms:
 
-// Entity
-// Attribute
-// Data type
-// Primary key
-// Schema
+// Entity - your table, it can represent a person,thing or event for example
+// Attribute - columns of your entity, details of each entity
+// Data type - each attribute has a certain data type : boolean, integer,float,text(string), varchar(string but with a limit on characters), date/datetime
+// Primary key - unique identifier for each row in your database
+// Schema -  how you plan out your database on what tables and columns you will use
