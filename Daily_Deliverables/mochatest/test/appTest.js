@@ -35,7 +35,7 @@ describe('App', function(){
             assert.typeOf(sayHelloResult, 'string');
         });
     });
-   
+   //this separates the tests for each function 
     describe('addNumbers()',function(){
         //checking for second function
         it('addNumbers should be above 5', function(){
