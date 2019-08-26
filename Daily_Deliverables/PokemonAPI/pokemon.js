@@ -32,7 +32,7 @@
     var request = $.ajax('https://pokeapi.co/api/v2/pokemon/' + name)
     .done(function (response) {
       const imgSource = response.sprites.front_default;
-  w  
+   
       const imgHtml = `<img src=${imgSource}>`; 
       $('#pokemonImage').html(imgHtml);
     })
