@@ -1,26 +1,26 @@
 {
   "development": {
-    "username": "me",
+    "username": "root",
     "password": null,
-    "database": "bookstore",
+    "database": "database_development",
     "host": "127.0.0.1",
-    "dialect": "postgres",
+    "dialect": "mysql",
     "operatorsAliases": false
   },
   "test": {
-    "username": "me",
+    "username": "root",
     "password": null,
     "database": "database_test",
     "host": "127.0.0.1",
-    "dialect": "postgres",
+    "dialect": "mysql",
     "operatorsAliases": false
   },
   "production": {
-    "username": "me",
+    "username": "root",
     "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
-    "dialect": "postgres",
+    "dialect": "mysql",
     "operatorsAliases": false
   }
 }
