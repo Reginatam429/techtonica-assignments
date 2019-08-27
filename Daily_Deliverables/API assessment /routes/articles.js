@@ -17,15 +17,22 @@ router.post('/', function(req, res, next) {
   Article.create(req.body).then(function(article) {
     res.redirect("/articles/" + article.id);
   }).catch(function(err){
+      if (err.name === "SequelizeValidationError"){
+        res.render('articles/new', {article: Article.build(req.body),
+        title: 'New Article',
+        error: err.errors
+      });
+      } else{
+        throw err;
+      }
+  }).catch(function(err){
     res.send(500);
   });
 });
 
 /* Create a new article form. */
 router.get('/new', function(req, res, next) {
-  res.render('articles/new', {article: Article.build(), title: 'New Article'}).catch(function(err){
-    res.send(500);
-  });
+  res.render('articles/new', {article: Article.build(), title: 'New Article'});
 });
 
 /* Edit article form. */
@@ -82,6 +89,17 @@ router.put('/:id', function(req, res, next){
    
   }).then(function(article){
     res.redirect("/articles/" + article.id);    
+  }).catch(function(err){
+    if(err.name === "SequelizeValidationError"){
+      var article = Article.build(req.body);
+      article.id = req.params.id;
+      res.render('articles/edit', {article: article,
+        title: 'Edit Article',
+        error: err.errors
+      });
+    } else {
+      throw err;
+    }
   }).catch(function(err){
     res.send(500);
   });

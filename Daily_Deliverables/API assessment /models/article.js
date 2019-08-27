@@ -5,6 +5,11 @@ var dateFormat = require('dateformat');
 module.exports = function(sequelize, DataTypes) {
   var Article = sequelize.define('Article', {
     title: DataTypes.STRING,
+      validate: {
+        notEmpty: {
+          msg: "Title is required."
+        }
+      },
     author: DataTypes.STRING,
     body: DataTypes.TEXT
   });
