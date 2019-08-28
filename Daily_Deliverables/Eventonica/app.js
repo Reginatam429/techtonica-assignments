@@ -59,12 +59,57 @@ const connection = require('./connection');
 
  app.createNewUser = (continueCallback) => {
   //YOUR WORK HERE
+  const questions = [
+  {
+      message: "What's your first name?",
+      type: "input",
+      name: "firstName",
+      validate: function validateFirstName(name){
+        return name !== '';
+      }
+  },{
+      message: "What's your last name?",
+      type: "input",
+      name: "lastName",
+      validate: function validateLastName(name){
+        return name !== '';
+      }
+  },{
+    message: "What's your age?",
+    type: "input",
+    name: "age",
+    validate: function validateAge(name){
+      return name !== '';
+    }
+},{
+  message: "What's your email?",
+  type: "input",
+  name: "email",
+  validate: function validateEmail(name){
+    return name !== '';
+  }
+}];
 
-   console.log('Please write code for this function');
+  inquirer.prompt(questions).then(result => {
+    // connection.query('SELECT * FROM public.users', (err, res) => {
+    //   if (err){
+    //     throw err
+    //   }
+    //   console.log('user: ', res.rows[0]);
+    // })
+
+    connection.query('INSERT INTO users (firstName,lastName, age, email) VALUES($1, $2, $3, $4)', [result.firstName, result.lastName, result.age, result.email], (err, res) => {
+        if(err) {
+          throw err
+        }
+      console.log('user:', res.rows[0])
+    })
+  //  console.log('Please write code for this function');
   //End of your work
   continueCallback();
+  })
+ };
 
- }
 
  app.searchEventful = (continueCallback) => {
   //YOUR WORK HERE
