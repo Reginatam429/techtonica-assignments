@@ -11,15 +11,15 @@ client.searchEvents({
    if(err){
      return console.error(err);
    }
-   let resultEvents = data.search.events.event;
+   let eventResult = data.search.events.event;
    console.log('Received ' + data.search.total_items + ' events');
    console.log('Event listings: ');
-   for ( let i =0 ; i < resultEvents.length; i++){
+   for ( let i =0 ; i < eventResult.length; i++){
      console.log("===========================================================")
-     console.log('title: ',resultEvents[i].title);
-     console.log('start_time: ',resultEvents[i].start_time);
-     console.log('venue_name: ',resultEvents[i].venue_name);
-     console.log('venue_address: ',resultEvents[i].venue_address);
+     console.log('title: ',eventResult[i].title);
+     console.log('start_time: ',eventResult[i].start_time);
+     console.log('venue_name: ',eventResult[i].venue_name);
+     console.log('venue_address: ',eventResult[i].venue_address);
    }
 });
 

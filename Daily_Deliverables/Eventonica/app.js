@@ -1,6 +1,9 @@
 const inquirer = require('inquirer');
 //connection available to all
 const connection = require('./connection');
+const eventful = require('eventful-node');
+const client = new eventful.Client('2FKQR3txxbXxMrRp');
+
 
  const app = {};
 
@@ -64,28 +67,28 @@ const connection = require('./connection');
       message: "What's your first name?",
       type: "input",
       name: "firstName",
-      validate: function validateFirstName(name){
+      validate: function validatefirstName(name){
         return name !== '';
       }
   },{
       message: "What's your last name?",
       type: "input",
       name: "lastName",
-      validate: function validateLastName(name){
+      validate: function validatelastName(name){
         return name !== '';
       }
   },{
     message: "What's your age?",
     type: "input",
     name: "age",
-    validate: function validateAge(name){
+    validate: function validateage(name){
       return name !== '';
     }
 },{
   message: "What's your email?",
   type: "input",
   name: "email",
-  validate: function validateEmail(name){
+  validate: function validateemail(name){
     return name !== '';
   }
 }];
@@ -98,7 +101,7 @@ const connection = require('./connection');
     //   console.log('user: ', res.rows[0]);
     // })
 
-    connection.query('INSERT INTO users (firstName,lastName, age, email) VALUES($1, $2, $3, $4)', [result.firstName, result.lastName, result.age, result.email], (err, res) => {
+    connection.query('INSERT INTO users (firstname,lastname, age, email) VALUES($1, $2, $3, $4)', [result.firstName, result.lastName, result.age, result.email], (err, res) => {
         if(err) {
           throw err
         }
@@ -114,7 +117,50 @@ const connection = require('./connection');
  app.searchEventful = (continueCallback) => {
   //YOUR WORK HERE
 
-   console.log('Please write code for this function');
+  inquirer.prompt({
+    type: "input",
+    name: "keyword",
+    message: "What type of event would you like to view next week in San Francisco?"
+  })
+  .then( answer => {
+    const { keyword } = answer;
+    client.searchEvents(
+      {
+        keywords: keyword,
+        location: "San Francisco",
+        date: "Next Week"
+      },
+      (err, data) => {
+        if (err) {
+          return console.error(err);
+        }
+        eventResult = data.search.events.event[0];
+        console.log(
+          "This event next week that matches your keyword:"
+        );
+        console.log("title: ", eventResult.title);
+        console.log("start_time: ", eventResult.start_time);
+        console.log("venue_name: ", eventResult.venue_name);
+        console.log("venue_address: ", eventResult.venue_address);
+       inquirer.prompt([
+        {
+        type: "list",
+        name: "yesorno",
+        message: "Would you like to save this event?",
+        choices: ["yes","no"],
+        },
+      ]) .then(answers => {
+        console.log("You picked: ", answers.yesorno);
+        if (answer === "no"){
+          app.searchEventful(continueCallback); 
+        }
+      })
+      }
+    );
+  })
+  ;
+
+  //  console.log('Please write code for this function');
   //End of your work
   continueCallback();
 }

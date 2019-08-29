@@ -10,8 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "eventful-node": "^1.1.1",
     "inquirer": "^7.0.0",
     "nodemon": "^1.19.1",
-    "pg": "^7.12.1"
+    "pg": "^7.12.1",
+    "rxjs": "^6.5.2"
   }
 }
