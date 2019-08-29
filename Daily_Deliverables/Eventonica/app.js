@@ -174,11 +174,38 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
 
  app.matchUserWithEvent = (continueCallback) => {
   //YOUR WORK HERE
+  
+  inquirer.prompt({
+    type: "input",
+    name: "userid",
+    message: "What is the userID you want to select?"
+  }).then( answer => {
+   console.log('You have selected user: ', answer.userid);
+   connection.query('SELECT firstname FROM users WHERE userid = $1', [answer.userid], (err, res) => {
+    if(err) {
+      throw err
+    }
+  console.log('user: ', res.rows[0])
+  });
+}).then(
+  connection.query('SELECT title FROM events', (err) => {
+    if(err) {
+      throw err
+    }
+  })
+  ).prompt([
+    {
+    type: "list",
+    name: "eventslist",
+    message: "Which event would you like to add?",
+    choices: [title],
+    }
+  ])
 
-   console.log('Please write code for this function');
+
   //End of your work
   continueCallback();
-}
+  }
 
  app.seeEventsOfOneUser = (continueCallback) => {
   //YOUR WORK HERE
