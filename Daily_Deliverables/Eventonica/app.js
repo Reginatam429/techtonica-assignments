@@ -116,7 +116,6 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
 
  app.searchEventful = (continueCallback) => {
   //YOUR WORK HERE
-
   inquirer.prompt({
     type: "input",
     name: "keyword",
@@ -149,16 +148,24 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
         message: "Would you like to save this event?",
         choices: ["yes","no"],
         },
-      ]) .then(answers => {
-        console.log("You picked: ", answers.yesorno);
-        if (answer === "no"){
+      ]).then( answer => {
+        console.log("You picked: ", answer.yesorno);
+        if (answer.yesorno === "no"){
+          
           app.searchEventful(continueCallback); 
+        } else{
+          connection.query('INSERT INTO events (title,start_time, venue_name, venue_address) VALUES($1, $2, $3, $4 )', [eventResult.title, eventResult.start_time, eventResult.venue_name, eventResult.venue_address], (err, res) => {
+            if(err) {
+              throw err
+            }
+          console.log('event: ', res)
+        }) 
         }
       })
       }
     );
   })
-  ;
+
 
   //  console.log('Please write code for this function');
   //End of your work
