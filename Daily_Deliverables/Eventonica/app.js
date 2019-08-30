@@ -107,7 +107,6 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
         }
       console.log('user:', res.rows[0])
     })
-  //  console.log('Please write code for this function');
   //End of your work
   continueCallback();
   })
@@ -181,26 +180,39 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
     message: "What is the userID you want to select?"
   }).then( answer => {
    console.log('You have selected user: ', answer.userid);
-   connection.query('SELECT firstname FROM users WHERE userid = $1', [answer.userid], (err, res) => {
+   connection.query('SELECT * FROM users WHERE userid = $1', [answer.userid], (err, res) => {
     if(err) {
       throw err
     }
-  console.log('user: ', res.rows[0])
-  });
-}).then(
-  connection.query('SELECT title FROM events', (err) => {
+    const user = res.rows[0];
+  console.log('user: ', user.firstname)
+
+  connection.query('SELECT * FROM events', (err,res) => {
     if(err) {
       throw err
     }
+    const events = res.rows;
+    inquirer.prompt([
+      {
+      type: "list",
+      name: "title",
+      message: "Which event would you like to add?",
+      choices: events.map(event => event.title)
+      }
+    ]).then( answer2 => {
+      const event = events.find(event  => answer2.title === event.title)
+      connection.query('INSERT INTO savedevents (user_id, user_firstname, user_lastname, event_id, event_title) VALUES ($1, $2, $3, $4, $5)', [user.userid, user.firstname,user.lastname, event.eventid, event.title])
+
+      console.log(`Congrats! ${user.firstname} is attending ${event.title}. woot woot!`)
+    }
+     
+      
+      )
   })
-  ).prompt([
-    {
-    type: "list",
-    name: "eventslist",
-    message: "Which event would you like to add?",
-    choices: [title],
-    }
-  ])
+
+  
+  });
+})
 
 
   //End of your work
@@ -209,8 +221,27 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
 
  app.seeEventsOfOneUser = (continueCallback) => {
   //YOUR WORK HERE
-
-   console.log('Please write code for this function');
+  inquirer.prompt({
+      type: "input",
+      name: "userid",
+      message:
+        "Which user's id would you like to see events for?:"
+    })
+    .then(ans => {
+      const { userid } = ans;
+      connection.query(
+        "SELECT title FROM events INNER JOIN savedevents ON events.eventid = savedevents.event_id WHERE savedevents.user_id = $1",
+        [userid],
+        (error, res) => {
+          if (error) {
+            throw error;
+          }
+          return res.rows.map(object => {
+            console.log(`**${object.title}**`);
+          });
+        }
+      );
+    });
   //End of your work
   continueCallback();
 }
