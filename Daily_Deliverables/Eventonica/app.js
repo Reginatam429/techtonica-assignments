@@ -225,7 +225,7 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
       type: "input",
       name: "userid",
       message:
-        "Which user's id would you like to see events for?:"
+        "Which user's id would you like to see events for?"
     })
     .then(ans => {
       const { userid } = ans;
@@ -261,14 +261,15 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
       choices: events.map(event => event.event_title)
       }
     ]).then(ans2 => {
-      const { chosenevent } = ans2;
+      
       connection.query(
         "SELECT firstname FROM users INNER JOIN savedevents ON users.userid = savedevents.user_id WHERE savedevents.event_title = $1",
-        [chosenevent],
+         [ans2.attendee],
         (error, res3) => {
           if (error) {
             throw error;
           }
+          // console.log(ans2);
           return res3.rows.map(object => {
             console.log(`${object.firstname}`);
           });
