@@ -237,7 +237,7 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
             throw error;
           }
           return res.rows.map(object => {
-            console.log(`**${object.title}**`);
+            console.log(`${object.title}`);
           });
         }
       );
@@ -248,8 +248,34 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
 
  app.seeUsersOfOneEvent = (continueCallback) => {
   //YOUR WORK HERE
-
-   console.log('Please write code for this function');
+  connection.query('SELECT * FROM savedevents', (err,res) => {
+    if(err) {
+      throw err
+    }
+    const events = res.rows;
+    inquirer.prompt([
+      {
+      type: "list",
+      name: "attendee",
+      message: "Which event would you like to see the attendees for?",
+      choices: events.map(event => event.event_title)
+      }
+    ]).then(ans2 => {
+      const { chosenevent } = ans2;
+      connection.query(
+        "SELECT firstname FROM users INNER JOIN savedevents ON users.userid = savedevents.user_id WHERE savedevents.event_title = $1",
+        [chosenevent],
+        (error, res3) => {
+          if (error) {
+            throw error;
+          }
+          return res3.rows.map(object => {
+            console.log(`${object.firstname}`);
+          });
+        }
+      );
+    });
+  }),
   //End of your work
   continueCallback();
 }
