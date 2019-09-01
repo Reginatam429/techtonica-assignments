@@ -105,10 +105,11 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
         if(err) {
           throw err
         }
-      console.log('user:', res.rows[0])
+      console.log('user:', res.rows[0]);
+      continueCallback();
     })
   //End of your work
-  continueCallback();
+  //continueCallback();
   })
  };
 
@@ -157,7 +158,8 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
             if(err) {
               throw err
             }
-          console.log('event: ', res)
+          console.log('event: ', res);
+          continueCallback();
         }) 
         }
       })
@@ -168,7 +170,7 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
 
   //  console.log('Please write code for this function');
   //End of your work
-  continueCallback();
+  //continueCallback();
 }
 
  app.matchUserWithEvent = (continueCallback) => {
@@ -203,7 +205,8 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
       const event = events.find(event  => answer2.title === event.title)
       connection.query('INSERT INTO savedevents (user_id, user_firstname, user_lastname, event_id, event_title) VALUES ($1, $2, $3, $4, $5)', [user.userid, user.firstname,user.lastname, event.eventid, event.title])
 
-      console.log(`Congrats! ${user.firstname} is attending ${event.title}. woot woot!`)
+      console.log(`Congrats! ${user.firstname} is attending ${event.title}. woot woot!`);
+      continueCallback();
     }
      
       
@@ -216,7 +219,7 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
 
 
   //End of your work
-  continueCallback();
+  //continueCallback();
   }
 
  app.seeEventsOfOneUser = (continueCallback) => {
@@ -238,12 +241,13 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
           }
           return res.rows.map(object => {
             console.log(`${object.title}`);
+            continueCallback();
           });
         }
       );
     });
   //End of your work
-  continueCallback();
+  // continueCallback();
 }
 
  app.seeUsersOfOneEvent = (continueCallback) => {
@@ -272,13 +276,15 @@ const client = new eventful.Client('2FKQR3txxbXxMrRp');
           // console.log(ans2);
           return res3.rows.map(object => {
             console.log(`${object.firstname}`);
+            continueCallback();
           });
         }
       );
     });
-  }),
+  })
+  //,
   //End of your work
-  continueCallback();
+   //continueCallback();
 }
 
  module.exports = app;
