@@ -1,9 +1,7 @@
 const connection = require('./connection');
 const app = require('./app');
 
-// const pgConnect = () => {
-  
-// }
+
 connection.connect((err) =>{
   if (err) throw err;
 
@@ -13,7 +11,6 @@ connection.connect((err) =>{
    app.startQuestion(()=>{ connection.end() });
 })
 
- // postgres setup
 
- //pgConnect();
+ 
  
