@@ -1,0 +1,20 @@
+{
+  "name": "9.3-mongodb_independentpratice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^2.2.36"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
