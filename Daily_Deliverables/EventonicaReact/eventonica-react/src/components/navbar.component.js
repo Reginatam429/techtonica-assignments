@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default class Navbar extends Component {
 
   render() {
     return (
+
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-        <Link to="/" className="navbar-brand">EventonicaReact</Link>
+        <NavLink to="/" className="navbar-brand">EventonicaReact</NavLink>
         <div className="collpase navbar-collapse">
         <ul className="navbar-nav mr-auto">
+
           <li className="navbar-item">
-          <Link to="/create/user" className="nav-link">Create User</Link>
+          <NavLink to="/create/user" className="nav-link" activeClassName="nav-link-active" >Create User</NavLink>
           </li>
           <li className="navbar-item">
-          <Link to="/events" className="nav-link">Find Events</Link>
+          <NavLink to="/events" className="nav-link" activeClassName="nav-link-active">Find Events</NavLink>
           </li>
           <li className="navbar-item">
-          <Link to="/" className="nav-link">Saved Events List</Link>
+          <NavLink to="/" className="nav-link" activeClassName="nav-link-active">Saved Events List</NavLink>
           </li>
         </ul>
         </div>

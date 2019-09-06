@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import axios from 'axios';
+
 
 export default class CreateUser extends Component {
     constructor(props) {
@@ -38,15 +40,19 @@ export default class CreateUser extends Component {
         e.preventDefault();
 
         const user = {
-            username: this.state.username,
-            email: this.state.email,
-            age: this.state.age
+            "username": this.state.username,
+            "email": this.state.email,
+            "age": this.state.age
         }
 
         console.log(user);
         alert("Congrats! User "+ this.state.username + " has been created.");
 
-        window.location = "/";
+        axios.post('http://localhost:5000/user/add', user)
+            .then(res => console.log(res.data));
+
+        
+        window.location = "/create/user";
     }
     render() {
         return (

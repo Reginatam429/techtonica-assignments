@@ -7,7 +7,7 @@ router.route('/').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/add').post((req, res) => {
+router.route('/event/add').post((req, res) => {
     const title = req.body.title;
     const location = req.body.location;
     const date = Date.parse(req.body.date);
