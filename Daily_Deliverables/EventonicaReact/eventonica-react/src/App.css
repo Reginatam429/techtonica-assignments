@@ -1,3 +1,11 @@
+body {
+  background: url("https://ak6.picdn.net/shutterstock/videos/1014214436/thumb/1.jpg")fixed;
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .App {
   text-align: center;
 }

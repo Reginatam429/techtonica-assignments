@@ -18,7 +18,7 @@ export default class Navbar extends Component {
           <NavLink to="/events" className="nav-link" activeClassName="nav-link-active">Find Events</NavLink>
           </li>
           <li className="navbar-item">
-          <NavLink to="/" className="nav-link" activeClassName="nav-link-active">Saved Events List</NavLink>
+          <NavLink to="/savedevents" className="nav-link" activeClassName="nav-link-active">Saved Events List</NavLink>
           </li>
         </ul>
         </div>

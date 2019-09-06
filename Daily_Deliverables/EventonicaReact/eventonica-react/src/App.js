@@ -1,10 +1,10 @@
-const eventKey = require('./keys').eventbrite;
-const client = new eventbrite.Client(eventKey);
-
 import React from 'react';
-//import './App.css';
+import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"
+
+// const eventKey = require('./keys').eventbrite;
+// const client = new eventbrite.Client(eventKey);
 
 import Navbar from "./components/navbar.component";
 
