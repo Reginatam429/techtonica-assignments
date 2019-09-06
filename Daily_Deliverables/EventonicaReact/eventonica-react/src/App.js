@@ -17,19 +17,21 @@ import SavedeventsList from "./components/savedevents-list.component";
 function App() {
   return (
     <Router>
-      <Navbar />
-      <br/>
-      {/*Event Routes*/}
-      <Route path="/events" component={EventList} />
-      <Route path="event/edit/:id" component={EditEvents} />
+      <div className="container">
+        <Navbar />
+        <br/>
+        {/*Event Routes*/}
+        <Route path="/events" component={EventList} />
+        <Route path="event/edit/:id" component={EditEvents} />
 
-      {/*User Routes*/}
-      <Route path="/user/edit/:id" component={EditUser} />
-      <Route path="/create/user" component={CreateUser} />
+        {/*User Routes*/}
+        <Route path="/user/edit/:id" component={EditUser} />
+        <Route path="/create/user" component={CreateUser} />
 
-      {/*Eventsaved Routes*/}
-      <Route path="/" exact component={SavedeventsList} />
+        {/*Eventsaved Routes*/}
+        <Route path="/" exact component={SavedeventsList} />
 
+      </div>
     </Router>
   );
 }
