@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+//import './App.css';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css"
+
+import Navbar from "./components/navbar.component"
+//Event
+import EventList from "./components/events-list.component"
+import EditEvents from "./components/edit-events.component"
+//User
+import EditUser from "./components/edit-user.component"
+import CreateUser from "./components/create-user.component"
+
+//Savedevents
+import SavedeventsList from "./components/savedevents-list.component"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <br/>
+      //Event Routes
+      <Route path="/event" component={EventList} />
+      <Route path="event/edit/:id" component={EditEvents} />
+
+      //User Routes
+      <Route path="/user/edit/:id" component={EditUser} />
+      <Route path="/create" component={CreateUser} />
+
+      //Eventsaved Routes
+      <Route path="/" exact component={SavedeventsList} />
+
+    </Router>
   );
 }
 
