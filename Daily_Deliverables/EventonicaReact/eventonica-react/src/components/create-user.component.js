@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-
 export default class CreateUser extends Component {
     constructor(props) {
         super(props);
@@ -58,6 +57,7 @@ export default class CreateUser extends Component {
         return (
         <div>
             <h1>Create New User</h1>
+            <br></br>
             <form onSubmit={this.onSubmit}>
                 <div className="form-group">
                     <label>Username: </label>

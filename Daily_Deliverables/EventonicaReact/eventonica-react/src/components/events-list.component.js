@@ -10,7 +10,7 @@ export default class EventsList extends Component {
     render() {
         return (
             <div>
-                <p>You are on the events list component!</p>
+                <h1>You are on the events list component!</h1>
             </div>
                         
         )

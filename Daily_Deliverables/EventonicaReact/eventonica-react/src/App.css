@@ -20,6 +20,11 @@ h1{
   text-align: center; 
 }
 
+.cardText{
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Black Ops One', cursive;
+}
 .App {
   text-align: center;
 }
