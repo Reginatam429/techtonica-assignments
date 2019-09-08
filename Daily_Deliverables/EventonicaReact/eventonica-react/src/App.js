@@ -4,6 +4,9 @@ import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"
 
+//Ticketmaster
+import ticketmaster from './apis/ticketmaster';
+
 import Navbar from "./components/navbar.component";
 
 //Homepage
