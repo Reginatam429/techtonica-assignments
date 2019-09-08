@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
 import { Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle, Button } from 'reactstrap';
+import concert from "../Images/concert.png";
 
 
 export default class Homepage extends Component {
@@ -10,23 +11,24 @@ export default class Homepage extends Component {
                 <h1>Welcome to Eventonica!</h1>
                 <br></br>
                 <p>This is the place for you to play with events:</p>
-                <div className="centerButtons">
-                    <NavLink to="/create/user"><button type="button" size="lg">Create your user</button></NavLink><br></br>
-                    <br></br>
-                    <NavLink to="/events"><button type="button" size="lg">See upcoming events in San Francisco Bay Area</button></NavLink><br></br>
-                    <br></br>
-                    <NavLink to="/user/edit/:id"><button type="button" size="lg">Edit your user info</button></NavLink>
+                <br></br>
+
+                <div>
+                  <Card style={{flex:1, backgroundColor:'blue'}}>
+                  <CardBody style={{backgroundColor:'white'}} >
+                   <p>What yould you like to do:</p>
+                  <div className="centerButtons">
+                    <NavLink to="/create/user"><Button size="lg" block > Create your user </Button></NavLink><br></br>
+                    <NavLink to="/events"><Button size="lg" block>See upcoming events in San Francisco Bay Area</Button></NavLink><br></br>
+                    <NavLink to="/user/edit/:id"><Button  size="lg" block>Edit your user info</Button></NavLink>
+                   </div>
+                  </CardBody>
+                </Card>
                 </div>
                 <div>
-                  <Card>
-        {/* <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" /> */}
-        <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-          <Button>Button</Button>
-        </CardBody>
-      </Card>
+                  <img src={concert} alt="concert"
+                  height={300}
+                  width={860}/>
                 </div>
             </div>
         )
