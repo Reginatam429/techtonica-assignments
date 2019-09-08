@@ -4,7 +4,7 @@ export default class EditEvents extends Component {
     render() {
         return (
             <div>
-                <p>You are on the edit events component!</p>
+                <h1>You are on the edit events component!</h1>
             </div>
         )
     }
