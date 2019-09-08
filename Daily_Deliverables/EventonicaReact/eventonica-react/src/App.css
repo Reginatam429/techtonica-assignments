@@ -1,9 +1,22 @@
+
 body {
-  background: url("https://ak6.picdn.net/shutterstock/videos/1014214436/thumb/1.jpg")fixed;
+  background: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v463-aum-16-abstractbackground_1.jpg?auto=format&bg=F4F4F3&con=3&cs=srgb&dpr=1&fm=jpg&ixlib=php-1.1.0&mark=rawpixel-watermark.png&markalpha=90&markpad=13&markscale=10&markx=25&q=75&usm=15&vib=3&w=1200&s=5c5f3de7ec43d1f8d7ce404a3276a00d")fixed;
   height: 100%; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap');
+
+h1{
+  text-align: center;
+  font-family: 'Black Ops One', cursive;
+  color: whitesmoke;
+  text-shadow: 2px 2px #2b00ffac;
+}
+.centerButtons{
+  text-align: center; 
 }
 
 .App {
@@ -30,6 +43,7 @@ body {
 .App-link {
   color: #61dafb;
 }
+
 
 @keyframes App-logo-spin {
   from {

@@ -12,8 +12,8 @@ export default class CreateUser extends Component {
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
-            username: "",
-            email: "",
+            username: "Name",
+            email: "email",
             age: 0
         }
     }
@@ -57,7 +57,7 @@ export default class CreateUser extends Component {
     render() {
         return (
         <div>
-            <h3>Create New User</h3>
+            <h1>Create New User</h1>
             <form onSubmit={this.onSubmit}>
                 <div className="form-group">
                     <label>Username: </label>

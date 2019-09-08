@@ -6,8 +6,8 @@ export default class Navbar extends Component {
   render() {
     return (
 
-      <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-        <NavLink to="/" className="navbar-brand">EventonicaReact</NavLink>
+      <nav className="navbar navbar-dark bg-primary navbar-expand-lg">
+        <NavLink to="/" className="navbar-brand" >EventonicaReact</NavLink>
         <div className="collpase navbar-collapse">
         <ul className="navbar-nav mr-auto">
 
@@ -21,6 +21,7 @@ export default class Navbar extends Component {
           <NavLink to="/savedevents" className="nav-link" activeClassName="nav-link-active">Saved Events List</NavLink>
           </li>
         </ul>
+        
         </div>
       </nav>
     );
