@@ -12,7 +12,7 @@ export class Provider extends Component {
     componentDidMount(){
         axios.get(`https://app.ticketmaster.com/discovery/v2/events.json?dmaId=382&apikey=${process.env.REACT_APP_TM_KEY}`)
             .then(res => {
-                // console.log(res.data);
+                console.log(res.data);
                 this.setState({event_list: res.data._embedded.events});
             })
             .catch(err => console.log(err));

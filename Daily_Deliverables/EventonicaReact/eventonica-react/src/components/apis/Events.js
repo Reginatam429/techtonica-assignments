@@ -20,7 +20,7 @@ class Events extends Component {
                                     <h3 className="text-center mb-4">{heading}</h3>
                               <div className="row">
                                 {event_list.map(item =>(
-                                  <Event />
+                                  <Event key={item._embedded.id} event={item}/>
                                 ))}
                               </div>
                               </React.Fragment>
