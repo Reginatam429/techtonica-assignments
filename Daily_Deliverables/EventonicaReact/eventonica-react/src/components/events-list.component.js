@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-// const ticketmaster = require('eventful-node');
-// const client = new ticketmaster.Client(tmKey);
+
+
 // import axios from 'axios';
 // import DatePicker from 'react-datepicker';
 // import "react-datepicker/dist/react-datepicker.css";
@@ -33,6 +33,10 @@ export default class EventsList extends Component {
                     <input onChange={this.handleChange} name='event-search' type="text" value={this.state.term}/>
                 </div>
             </form>
+            <br></br>
+            <div className="form-group">
+                    <input type="submit" value="Search Events" className="btn btn-primary" />
+            </div>
         </div>
         </div>
         )

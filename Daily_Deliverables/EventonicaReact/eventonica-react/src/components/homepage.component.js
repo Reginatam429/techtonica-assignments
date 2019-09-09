@@ -7,7 +7,7 @@ import concert from "../Images/concert.png";
 export default class Homepage extends Component {
     render() {
         return (
-            <div>
+            <div className="container">
                 <h1>Welcome to Eventonica!</h1>
                 <br></br>
                 <p>This is the place for you find the perfect event to attend!</p>

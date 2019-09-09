@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"
 
 //Ticketmaster
-import ticketmaster from './apis/ticketmaster';
+
+import Ticketmaster from "./components/ticketmaster.component";
 
 import Navbar from "./components/navbar.component";
 
@@ -43,7 +44,9 @@ function App() {
 
           {/*Eventsaved Routes*/}
           <Route path="/savedevents" exact component={SavedeventsList} />
-          
+
+          {/*TMtest Route*/}
+          <Route path="/tmtest" exact component={Ticketmaster} />    
       </div>
     </Router>
     </body>
