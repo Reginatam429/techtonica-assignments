@@ -8,7 +8,7 @@ class Ticketmaster extends Component {
     };
 
     async componentDidMount(){
-        const url ="https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=382&apikey=rg59B1BXpFdDzMUZEJAQslbCEJ8gdxYU";
+        const url =`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=382&apikey=${process.env.REACT_APP_TM_KEY}`;
         const response = await fetch(url);
         const data = await response.json();
         this.setState({event: data._embedded.events[2], loading:false
