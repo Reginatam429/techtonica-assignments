@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
-import { Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Card, CardBody, Button } from 'reactstrap';
 import concert from "../Images/concert.png";
 
 
@@ -20,7 +20,7 @@ export default class Homepage extends Component {
                   <div className="centerButtons">
                     <NavLink to="/create/user"><Button size="lg" block > Create your user </Button></NavLink><br></br>
                     <NavLink to="/events"><Button size="lg" block>See upcoming events in San Francisco Bay Area</Button></NavLink><br></br>
-                    <NavLink to="/user/edit/:id"><Button  size="lg" block>Edit your user info</Button></NavLink>
+                    {/* <NavLink to="/user/edit/:id"><Button  size="lg" block>Edit your user info</Button></NavLink> */}
                    </div>
                   </CardBody>
                 </Card>

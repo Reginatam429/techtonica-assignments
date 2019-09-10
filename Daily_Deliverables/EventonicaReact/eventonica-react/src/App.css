@@ -7,7 +7,11 @@ body {
   background-size: cover;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Black+Ops+One|Raleway:800|Roboto:900&display=swap');
+
+h5{
+  font-family: 'Raleway', sans-serif;
+}
 
 h1{
   text-align: center;
@@ -18,7 +22,18 @@ h1{
 
 .card-body img {
    max-width: 100%;
+   height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  
 }
+
+.card-text {
+  text-align: center;
+}
+
 .centerButtons{
   text-align: center; 
 }

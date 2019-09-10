@@ -14,13 +14,13 @@ export default class Navbar extends Component {
           <li>
             <NavDropdown title="Users" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1" > <NavLink to="/create/user">Create User</NavLink></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2"><NavLink to="/user/edit/:id">Edit User</NavLink></NavDropdown.Item>
+              {/* <NavDropdown.Item href="#action/3.2"><NavLink to="/user/edit/:id">Edit User</NavLink></NavDropdown.Item> */}
           </NavDropdown>
           </li>
           <li>
             <NavDropdown title="Events" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1" > <NavLink to="/events">Find Event</NavLink></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2"><NavLink to="/savedevents">View Saved Events</NavLink></NavDropdown.Item>
+              {/* <NavDropdown.Item href="#action/3.2"><NavLink to="/savedevents">View Saved Events</NavLink></NavDropdown.Item> */}
           </NavDropdown>
           </li>
         </ul>

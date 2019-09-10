@@ -7,8 +7,7 @@ class Events extends Component {
     render() {
         return (
             <div>
-                <h1>Find your next event in the Bay Area!</h1>
-                <br></br>
+               
                 <Consumer>
                     {value => {
                         const {event_list, heading} =value
