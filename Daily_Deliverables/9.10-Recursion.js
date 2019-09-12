@@ -89,3 +89,14 @@ console.log (fibNum(8));
 //     endif
 // End
 // Based on the pseudocode, write a function called GCD that returns the correct answer when 48 and 14 are passed in.
+
+findGCD = (X,Y) => {
+    //base case
+    if (Y == 0) {return X;}
+    else {
+        let remainder = X%Y;
+        return findGCD(Y, remainder)
+    }
+}
+
+console.log(findGCD(48,14));
