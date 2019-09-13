@@ -1,0 +1,16 @@
+1. Deploying to Heroku: https://eventonica-react-sf.herokuapp.com/
+
+2.Recursion
+ Paste an example of recursion here, and explain what is happening in the code:
+ 
+ isPalindrome = (aString) => {
+    //base case #1
+    if(aString.length === 0 || aString.length === 1) return true;
+    //base case #2 - to determine if it is not a palindrome
+    if(aString[0] !== aString[aString.length -1]) return false;
+
+    return isPalindrome(aString.substr(1, aString.length -2))
+
+}
+    In this code, we have a base case that tells us when to stop the recursive case. The base case is if the string is 0-1 letters long, then it will return true and end the recursion. 
+    In our recursive case, we are telling the function to use sub.str to give us the text between two letters in and 2 letters from the end of the string. This allows us to compare the string we have returned in each succession of the recursion to check against the base cases.
